@@ -22,6 +22,333 @@ html, body {
   position: fixed;
   background: linear-gradient(to top, #fff,  #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0, #fff) !important;
 }
+    
+    
+.overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 20
+}
+    
+/*-------------------------------------*/    
+.pass {
+  position: absolute;
+  display: none;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%,-50%);
+  z-index: 20
+}
+    
+.admin_msg {  
+   position:absolute;
+   width: 200px;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 56px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: #666;
+   text-align:center;
+   display: block;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.code_error {  
+   position:absolute;
+   width: 200px;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 190px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: red;
+   text-align:center;
+   display: none;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+        
+.admin_code {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 65%;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 138px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 24px;
+   color: black;
+   height: 42px;
+   outline:none;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 16px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.admin_code::placeholder {  
+   font-size: 16px;
+   color: #777;
+}
+    
+    
+.enter {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 65%;
+   padding-top: 14px;
+   padding-bottom: 3px;
+   margin-bottom: 16px;
+   bottom: 0%;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 22px;
+   color: white;
+   height: 36px;
+   outline:none;
+   zoom: 0.9;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 40px;
+   background: #444;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, 0%);
+}
+    
+    
+        
+/*-------------------------------------*/  
+.form {
+  position: absolute;
+  display: block;
+  width: 330px;
+  height: 450px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%,-50%);
+  z-index: 20
+}
+    
+.form_msg {  
+   position:absolute;
+   width: 280px;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 36px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+   color: #555;
+   text-align:center;
+   display: block;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.missing {  
+   position:absolute;
+   width: 200px;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 330px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: red;
+   text-align:center;
+   display: none;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+        
+.date_depot {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 75%;
+   padding-top: 2px;
+   padding-bottom: 3px;
+   margin-top: 98px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: black;
+   height: 36px;
+   outline:none;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 16px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.date_depot::placeholder {  
+   font-size: 16px;
+   color: #777;
+}
+    
+    
+.montant {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 75%;
+   padding-top: 2px;
+   padding-bottom: 3px;
+   margin-top: 218px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: black;
+   height: 36px;
+   outline:none;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 16px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.montant::placeholder {  
+   font-size: 16px;
+   color: #777;
+}
+    
+.nom {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 75%;
+   padding-top: 2px;
+   padding-bottom: 3px;
+   margin-top: 158px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: black;
+   height: 36px;
+   outline:none;
+   text-transform: uppercase;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 16px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.nom::placeholder {  
+   font-size: 16px;
+   color: #777;
+}
+    
+            
+.mode_depot {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 75%;
+   padding-top: 2px;
+   padding-bottom: 3px;
+   margin-top: 278px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: black;
+   height: 42px;
+   outline:none;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 16px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+    
+    
+.mode_depot::placeholder {  
+   font-size: 16px;
+   color: #777;
+}
+    
+    
+.save {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 65%;
+   padding-top: 14px;
+   padding-bottom: 3px;
+   margin-bottom: 16px;
+   bottom: 0%;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 22px;
+   color: white;
+   height: 36px;
+   outline:none;
+   zoom: 0.9;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 40px;
+   background: #444;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, 0%);
+}
 
 
 /**
@@ -33,12 +360,52 @@ html, body {
 .deposit_title {
   position: absolute;
   font-family: 'helvetica neue', 'roboto', sans-serif;
-  margin-top: 30px;
-  left: 36px;
-  font-size: 26px;
-  color: #444;
+  margin-top: 8px;
+  left: 22px;
+  font-size: 24px;
+  color: #222;
   z-index: 4
  }
+    
+.account {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-top: 12px;
+  margin-right: 12px;
+  border-radius: 50%;
+  right: 0%;
+  padding: 5px;
+  background: #f2f2f2;
+  box-shadow: 2px 2px 13px #aaa;
+  z-index: 4
+ }
+    
+    
+.search_input {  
+   position:absolute;
+   overflow-y:hidden;
+   overflow-x:hidden; 
+   width: 65%;
+   padding-top: 4px;
+   padding-bottom: 3px;
+   margin-top: 138px;
+   font-family: 'helvetica neue', 'roboto', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   color: black;
+   height: 42px;
+   outline:none;
+   box-shadow: 1px 1px 10px #ccc;
+   text-align:center;
+   display: block;
+   border: 0px solid #f2f2f2;
+   border-radius: 40px;
+   background: #fff;
+   z-index: 1;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
 
 
 
@@ -46,11 +413,12 @@ html, body {
 #dep_list {
   position: absolute;
   list-style-type: none;
-  height: calc(100% - 92px);
+  height: calc(100% - 184px);
   position: absolute;
   list-style-type: none;
+  background: rgba(0,0,0,0);
   width: 100%;
-  top: 52px;
+  top: 160px;
   left: 0%;
   padding: 0;
   margin-right: 0px;
@@ -218,24 +586,96 @@ html, body {
 .balance {
    position: absolute;
    display: block;
-   right: 0%;
-   margin-right: 24px;
+   margin-left: 20px;
    text-align: right;
-   margin-top: 52px;
+   margin-top: 50px;
    width: auto;
    height: 30px;
-   zoom: 0.7;
+   zoom: 0.9;
    font-family: 'helvetica neue', 'roboto', sans-serif;
    font-size: 20px;
    background: #e6e6e6;
    padding-left: 16px;
-   padding-right: 20px;
    padding-top: 7px;
-   padding-right: 7px;
+   padding-right: 18px;
    border-radius: 20px;
    color: #222;
    font-weight: 500; 
 }
+    
+    
+/**
+ * ==============================================
+ * ANIM MASK
+ * ==============================================
+ */
+
+#anim_mask {
+  position: relative;
+  display: none;
+  padding: 10px;
+  width: calc(100% - 50px);
+  height: calc(100% - 30px);
+  background: rgba(255, 255, 255, 0.94);
+  top: 5px;
+  left: 15px;
+  z-index: 100;
+}
+
+#anim_mask2 {
+  position: absolute;
+  display: block;
+  padding: 0px;
+  width: 110px;
+  height: 110px;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.one_moment {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 40px;
+  top: calc(50% + 100px);
+  left: 0%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  z-index: 100;
+}
+
+#loading {
+  position: absolute;
+  display: block;
+  width: 110px;
+  height: 110px;
+  left: 0%;
+  top: 0%;
+  border: 5px solid #000;
+  border-radius: 50%;
+  border-top-color: rgba(0, 0, 0, 0);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+	
+    
     
 .bal_curr {
 }
@@ -250,18 +690,51 @@ html, body {
         
 </head>
 <body>
+  
+  
+<div class="overlay"></div>   
     
-    
-
-    <script src="/js/tailwind.js"></script>
-    <script src="/js/chart.js"></script>
-    <link rel="stylesheet" href="/css/fontawesome.css">
+<div class="pass">
+    <div class="code" style="position:absolute;font-size:0px;">NATH240480</div>
+    <div class="admin_msg">Saisissez le code de l'administrateur</div>
+    <div class="code_error">Code non valide</div>
+    <input type="text" class="admin_code" placeholder="Code admin" />
+    <div class="enter">Valider</div>
+</div>
+  
+  
+<div class="form">
+    <div class="form_msg">Informations du versement</div>
+    <div class="missing">Information manquante</div>
+    <input type="text" class="date_depot" placeholder="Date AAAA-MM_JJ" />
+    <input type="text" class="nom" placeholder="Nom complet" />
+    <input type="text" class="montant" placeholder="Montant" />
+    <div class="save">Enregistrer</div>
+  
+  <select class="mode_depot" name="mode_depot" id="mode_depot">
+     <option value="OM">Orange Money</option>
+     <option value="MO">MTN MoMo</option>
+     <option value="DO">Espèces</option>
+  </select>
+  
+  <div id="anim_mask">
+		 <div id="anim_mask2">
+          <div id="loading"></div>
+     </div>
+		 <div class="one_moment">Un instant s'il vous plaît...</div>
+  </div>
+  
+</div>
  
 
 <div class="deposit_title">Cotisation</div>
+
+<img class="account" src='data:image/png;base64,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'/>
   
 <!---------------DEPOSITS------------------->
   <div class="balance"></div>
+  
+  <input type="text" class="search_input" placeholder="Rechercher un don..." />
   
   <ul id="dep_list"></ul> 
   <div id="dep_listItem">
@@ -269,7 +742,7 @@ html, body {
                <h class="dep_date"></h>
                <img class="dep_ico">
                <img class="mode">
-               <h class="dep_payer">Martin Makon</h>
+               <h class="dep_payer"></h>
                <h class="dep_amount"></h>
                <h class="dep_solde"></h>
            </span>
@@ -291,44 +764,37 @@ html, body {
     
 
 $(document).ready(function(){
-
-   var vs_data = {
-  "_id": "66a670aa836b6c46d4350c30",
-  "email": "tjanirolph@hotmail.com",
-  "offer": "R",
-  "id": "INVTJ6RO736849",
-  "instal": "4",
-  "birth": "1977-12-28",
-  "pin": "pwIavKI2fFWyS2yHrtGt/l4HJ+t9WymGBQ4TCO2lhe+AXQ==",
-  "last": "Tjani-A-Tjani",
-  "first": "Rolph Dieudonne",
-  "addr": "108 rue de Carouge,<br>Geneve 1205, GE,<br>Switzerland",
-  "phone": "+41 79 922 15 91",
-  "iso": "CH",
-  "citizen": "Cameroon",
-  "Country": "Switzerland",
-  "prom": "25 000.00",
-  "enroll": "2024-07-26",
-  "status": "1|À jour",
-  "city": "Geneve"
-}
    
- var compte = 'NATH240480' //vs_data.id
+      getDeposits()
 
- var settings = {
-  "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-deuil-dons",
-  "method": "POST",
-  "timeout": 5000,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "data": JSON.stringify({
-    "compte": compte
-  }),
-};
+});
+
+
+
+
+function getDeposits() {
   
-$.ajax(settings).done(function (resp) {
+   $('.overlay').css('display','none')
+   $('.pass').css('display','none')
+   $('.form').css('display','none')
+  
+   var compte = 'NATH240480' //vs_data.id
 
+   var settings = {
+    "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-deuil-dons",
+    "method": "POST",
+    "timeout": 5000,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "data": JSON.stringify({
+      "compte": compte
+    }),
+  };
+  
+  
+  
+  $.ajax(settings).done(function (resp) {
 
               response = resp.documents
 
@@ -337,9 +803,6 @@ $.ajax(settings).done(function (resp) {
               })
 
               var balance = response[0].balance
-              var promise = (vs_data.prom).replaceAll(' ', '')
-              var respect = Number(balance) / Number(promise) * 100
-              $('.percentage').html(respect)
 
 
               if ( balance >= 0 ) {
@@ -349,14 +812,21 @@ $.ajax(settings).done(function (resp) {
                   $('.balance').html(e_numeral(balance) + '<h class="bal_curr"> &nbsp;'+ 'Fcfa' +'</h>')
                   $('.balance').css('color','#555');
               } 
+    
+               $('#dep_list').html('');   
 
-              var  listItemString = $('#dep_listItem').html();
+              listItemString = $('#dep_listItem').html();
   
               response.forEach(frt_buildNewList);
+   });
   
+  
+  
+}
 
-  
-              function frt_buildNewList(item, index) {
+
+
+function frt_buildNewList(item, index) {
                 
                   var lang = 'fr'
  
@@ -419,15 +889,131 @@ $.ajax(settings).done(function (resp) {
                 
                 
                 
-              }
-         
+}
+  
+  
+  
+$('.search_input').on("keyup", function(ev){  
+   var texto = $(this).val(); 
+   filtro(texto); 
+});  
+
+function filtro(texto) { 
+    var lista = $("#dep_list li").hide() 
+                     .filter(function(){ 
+                         var item = $(this).text(); 
+                         var padrao = new RegExp(texto, "i");                           
+                         return padrao.test(item); 
+                     }).closest("li").show(); 
+} 
+  
+  
+  
+$('.enter').click(function() {
+    var code = $('.code').html()
+    var admin_code = $('.admin_code').val()
+    
+    if ( code !== admin_code ){
+         $('.code_error').fadeIn()
+         $('.admin_code').css('background','#fcc8c5')
       
+         setTimeout(function(){
+               $('.code_error').css('display','none')
+               $('.admin_code').css('background','#fff')
+               $('.admin_code').val('')
+         }, 3000)
+    } else {
+         $('.form').fadeIn()
+         $('.overlay').css('display','block')
+    }
+  
+});
+  
+  
+$('.account').click(function() {
+  
+     $('.overlay').css('display','block')
+     $('.pass').fadeIn()
+     $('.code_error').css('display','none')
+     $('.admin_code').css('background','#fff')
+     $('.admin_code').val('')
+  
+});
+  
+  
+$('.overlay').click(function() {
+  
+     $('.overlay').css('display','none')
+     $('.pass').css('display','none')
+     $('.code_error').css('display','none')
+     $('.admin_code').css('background','#fff')
+     $('.admin_code').val('')
+  
+     $('.form').css('display','none')
+     $('.missing').css('display','none')
+     $('.date_depot').css('background','#fff')
+     $('.date_depot').val('')
+     $('.montant').css('background','#fff')
+     $('.montant').val('')
+     $('.mode_depot').css('background','#fff')
+     $('.mode_depot').val('')
+     $('.nom').css('background','#fff')
+     $('.nom').val('')
+  
+});
+
+
+$('.save').click(function() {
+  
+       var bal = ($('.balance').html()).split('.')[0]
+       var montant = $('.montant').val()
+       var balance = Number (bal.replace(' ','')) + Number(montant.replace(' ',''))
        
+  
+      var body = {} 
+          body.balance = balance + '.00'
+          body.compte = 'NATH240480'
+          body.credit = '0.00'
+          body.curr = 'XAF'
+          body.date = $('.date_depot').val();
+          body.debit = montant.replace(' ','') + '.00'
+          body.fx = '1.0000'
+          body.nop = String(Math.random()).substring(5,15)
+          body.op = 'deposit'
+          body.op_indic = 'DT'
+          body.part_name = ($('.nom').val()).toUpperCase()
+          body.time = Date.now();
+          body.mode = $('#mode_depot').val();
+  
+  //alert(JSON.stringify(body))
+  //return
+  
+  
+     $('#anim_mask').fadeIn()
+  
+  
+         	//Add new wehicle_______________________________________________
+	        var settings = {
+		        "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-add-deposit",
+		        "method": "POST",
+		        "timeout": 5000,
+		        "headers": {
+			        "Content-Type": "application/json"
+		        },
+		        "data": JSON.stringify(body),
+	        };
+
+	        $.ajax(settings).done(function(response) {
+
+		        if (response.statusCode == 201) {
+                     getDeposits()
+		        }
+
+	        });
   
 
 });
 
-});
 </script>
 
 </body>
