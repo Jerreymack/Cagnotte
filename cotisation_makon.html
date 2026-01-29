@@ -175,6 +175,17 @@ html, body {
 }
 
 
+.dep_ico {
+   position: absolute;
+   display: none;
+   right: 8px;
+   margin-top: 10px;
+   width: 100px;
+   height: 47px;
+   background: pink;
+}
+
+
 .dep_amount {
    position: absolute;
    display: block;
@@ -257,6 +268,7 @@ html, body {
            <span>
                <h class="dep_date"></h>
                <img class="dep_ico">
+               <img class="mode">
                <h class="dep_payer">Martin Makon</h>
                <h class="dep_amount"></h>
                <h class="dep_solde"></h>
@@ -379,6 +391,7 @@ $.ajax(settings).done(function (resp) {
                   $('.dep_payer', deplistItem).html('Bertrand Makon').css('display','block');
                 
                   $('.dep_ico', deplistItem).attr('src','https://eweego-s.tor1.cdn.digitaloceanspaces.com/INVESTORS/deposit.svg').css('display','block');
+                  $('.mode', deplistItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/___Nath_Deuil_Icones/MO.png').css('display','block');
                 
                   var amount = ''
 
