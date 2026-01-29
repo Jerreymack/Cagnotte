@@ -388,7 +388,7 @@ $.ajax(settings).done(function (resp) {
                   //tm = hh + ':' + mn + ':' + sc
 //alert(deplistItem)
                   $('.dep_date', deplistItem).html(e_formatCalDate(lang,dt)).css('display','block');
-                  $('.dep_payer', deplistItem).html('Bertrand Makon').css('display','block');
+                  $('.dep_payer', deplistItem).html(item.part_name).css('display','block');
                 
                   $('.dep_ico', deplistItem).attr('src','https://eweego-s.tor1.cdn.digitaloceanspaces.com/INVESTORS/deposit.svg').css('display','block');
                   $('.mode', deplistItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/___Nath_Deuil_Icones/MO.png').css('display','block');
