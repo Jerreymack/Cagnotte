@@ -695,10 +695,15 @@ html, body {
 <div class="overlay"></div>   
     
 <div class="pass">
-    <div class="code" style="position:absolute;font-size:0px;">NATH240480</div>
+    <div class="code" style="position:absolute;font-size:0px;">24041980</div>
     <div class="admin_msg">Saisissez le code de l'administrateur</div>
     <div class="code_error">Code non valide</div>
-    <input type="text" class="admin_code" placeholder="Code admin" />
+    <input type="tel" class="admin_code" placeholder="Code admin" 
+	           pattern="[0-9]*" 
+               inputmode="numeric"
+               maxlength="8"
+               required
+               autocomplete="off" />
     <div class="enter">Valider</div>
 </div>
   
@@ -778,7 +783,7 @@ function getDeposits() {
    $('.pass').css('display','none')
    $('.form').css('display','none')
   
-   var compte = 'NATH240480' //vs_data.id
+   var compte = '240480' //vs_data.id
 
    var settings = {
     "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-deuil-dons",
