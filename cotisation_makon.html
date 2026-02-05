@@ -711,7 +711,7 @@ html, body {
 <div class="form">
     <div class="form_msg">Informations du versement</div>
     <div class="missing">Information manquante</div>
-    <input type="text" class="date_depot" placeholder="Date AAAA-MM_JJ" />
+    <input type="text" class="date_depot" placeholder="Date AAAA-MM-JJ" />
     <input type="text" class="nom" placeholder="Nom complet" />
     <input type="text" class="montant" placeholder="Montant" />
     <div class="save">Enregistrer</div>
@@ -933,6 +933,11 @@ $('.enter').click(function() {
          $('.form').fadeIn()
 		 $('#anim_mask').css('display','none')
          $('.overlay').css('display','block')
+
+        $('.date_depot').val('')
+        $('.montant').val('')
+        $('.mode_depot').val('')
+        $('.nom').val('')
     }
   
 });
