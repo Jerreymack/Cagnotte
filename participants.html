@@ -463,7 +463,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADqCAMAAACfv/lBAAABelBMVEUAAA
     
 $(document).ready(function(){
 	
-	var compte = 'NATH240480'//ll_data.clt_nbr
+	var compte = 'NATH240480'
 	
 	
  var settings = {
@@ -517,14 +517,14 @@ function openInv_ewx(event) {
 
 $('.jr1').click(function(){
 	
-	var data = JSON.parse($('.data').html())
+	//var data = JSON.parse($('.data').html())
 	
-	const filteredArray = data.filter(item => item.jeu === "x");
+	//const filteredArray = data.filter(item => item.jeu === "x");
 
-	const param = btoa(JSON.stringify(filteredArray))
-    $('#candle_code').attr('data','' );	
-    $('#candle_code').attr('data','https://eweego-trax.netlify.app/vehicule_unass.html?param=' + param );
-    $('#candle_code').load(location.href + " #candle_code");
+	//const param = btoa(JSON.stringify(filteredArray))
+    ////$('#candle_code').attr('data','' );	
+    //$('#candle_code').attr('data','https://eweego-trax.netlify.app/vehicule_unass.html?param=' + param );
+    //$('#candle_code').load(location.href + " #candle_code");
 
 	
 	var evtIco = $('#candle').html()
