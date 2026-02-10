@@ -353,7 +353,7 @@ body, html {
  $(document).ready(function(){
 
 
-var compte = 'NATH240480'//ll_data.clt_nbr
+var compte = 'NATH240480'
 	
 	
  var settings = {
@@ -369,12 +369,11 @@ var compte = 'NATH240480'//ll_data.clt_nbr
   };
   $.ajax(settings).done(function (response) {
 
-             ewx_data = response.documents
-	  //console.log(response)
-	  
+	  	      const filteredArray = ewx_data.filter(item => item.jeu === "x");
+
 	          var ewx_listItemString = $('#ewx_listItem').html();
   
-             ewx_data.forEach(ewx_buildNewList);
+              filteredArray.forEach(ewx_buildNewList);
   
              function ewx_buildNewList(item, index) {
  
@@ -406,13 +405,10 @@ var compte = 'NATH240480'//ll_data.clt_nbr
 
                dt = yyyy + '-' + mm + '-' + dd 
                tm = hh + ':' + mn + ':' + sc
-
-              //$('.ewx_date', ewx_listItem).html(dt);
-              //$('.ewx_time', ewx_listItem).html(tm);
 					 
-				  $('.ewx_logo', ewx_listItem).attr('src', $('#candle').html());
+			   $('.ewx_logo', ewx_listItem).attr('src', $('#candle').html());
 
-                   $('.ewx_benef_img', ewx_listItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ item.member + '.png').css('display','block');
+               $('.ewx_benef_img', ewx_listItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ item.member + '.png').css('display','block');
 					 
 
 
@@ -454,46 +450,7 @@ function openInv_ewx(event) {
 
 
 
-$('.inv_ewx').click(function(){
-	$('#ewx_invList').animate({left: "0%"}, 500);
-	$('#tkt_invList').animate({left: "100%"}, 500);
-   $('#ice_invList').animate({left: "100%"}, 500);
- 	$('#prk_invList').animate({left: "100%"}, 500);
-   $('#fry_invList').animate({left: "100%"}, 500);
-});
 
-$('.inv_tkt').click(function(){
-	$('#ewx_invList').animate({left: "100%"}, 500);
-	$('#tkt_invList').animate({left: "0%"}, 500);
-	$('#ice_invList').animate({left: "100%"}, 500);
- 	$('#prk_invList').animate({left: "100%"}, 500);
-   $('#fry_invList').animate({left: "100%"}, 500); 
-});
-
-$('.inv_ice').click(function(){
-	$('#ewx_invList').animate({left: "100%"}, 500);	
-	$('#tkt_invList').animate({left: "100%"}, 500);
-	$('#ice_invList').animate({left: "0%"}, 500);
-  	$('#prk_invList').animate({left: "100%"}, 500);
-   $('#fry_invList').animate({left: "100%"}, 500);
-});
-
-
-$('.inv_prk').click(function(){
-	$('#ewx_invList').animate({left: "100%"}, 500);	
-	$('#tkt_invList').animate({left: "100%"}, 500);
-	$('#ice_invList').animate({left: "100%"}, 500);
-  	$('#prk_invList').animate({left: "0%"}, 500);
-   $('#fry_invList').animate({left: "100%"}, 500);
-});
-
-$('.inv_fry').click(function(){
-	$('#ewx_invList').animate({left: "100%"}, 500);	
-	$('#tkt_invList').animate({left: "100%"}, 500);
-	$('#ice_invList').animate({left: "100%"}, 500);
-   $('#prk_invList').animate({left: "100%"}, 500);
-   $('#fry_invList').animate({left: "0%"}, 500);
-});   
 
 
 </script>
