@@ -369,6 +369,8 @@ var compte = 'NATH240480'
   };
   $.ajax(settings).done(function (response) {
 
+	          var ewx_data = response.documents
+
 	  	      const filteredArray = ewx_data.filter(item => item.jeu === "x");
 
 	          var ewx_listItemString = $('#ewx_listItem').html();
