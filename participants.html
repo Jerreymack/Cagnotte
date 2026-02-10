@@ -534,6 +534,9 @@ $('.jr1').click(function(){
 });
 
 $('.jr2').click(function(){
+
+	var data = JSON.parse($('.data').html())
+	const filteredArray = data.filter(item => item.ven === "x");
 	
 	var evtIco = $('#coffin').html()
 	
@@ -545,6 +548,8 @@ $('.jr2').click(function(){
 	$('.evt').fadeIn();
 	$('.nbr').html('');
 	$('.nbr').fadeIn();
+	$('.nbr').html(filteredArray.length);
+	$('.nbrx').fadeIn();
 	
 	$('.ttl').css('display','none');
 	$('.ttl2').css('display','none');
@@ -557,6 +562,9 @@ $('.jr2').click(function(){
 
 
 $('.jr3').click(function(){
+
+	var data = JSON.parse($('.data').html())
+	const filteredArray = data.filter(item => item.sam === "x");
 		
 	var evtIco = $('#grave').html()
 	
@@ -568,6 +576,8 @@ $('.jr3').click(function(){
 	$('.evt').fadeIn();
 	$('.nbr').html('');
 	$('.nbr').fadeIn();
+	$('.nbr').html(filteredArray.length);
+	$('.nbrx').fadeIn();
 	
 	$('.ttl').css('display','none');
 	$('.ttl2').css('display','none');
