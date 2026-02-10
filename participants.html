@@ -435,10 +435,10 @@ body, html {
 	<object id="candle_code" type="text/html" data="https://deuilnathalie.netlify.app/jeudi.html" style="width:100%;height:100%;background:#fff;"></object>
 </div>
 <div id="ice_invList">
-		<object id="coffin_code" type="text/html" data="https://deuilnathalie.netlify.app/jeudi.html" style="width:100%;height:100%;background:#fff;"></object>
+		<object id="coffin_code" type="text/html" data="https://deuilnathalie.netlify.app/vendredi.html" style="width:100%;height:100%;background:#fff;"></object>
 </div>
 <div id="prk_invList">
-		<object id="grave_code" type="text/html" data="https://deuilnathalie.netlify.app/jeudi.html" style="width:100%;height:100%;background:#fff;"></object>
+		<object id="grave_code" type="text/html" data="https://deuilnathalie.netlify.app/samedi.html" style="width:100%;height:100%;background:#fff;"></object>
 </div>
 <div id="fry_invList"></div>
 
@@ -463,8 +463,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADqCAMAAACfv/lBAAABelBMVEUAAA
     
 $(document).ready(function(){
 	
-	var compte = 'NATH240480'
-	
+ var compte = 'NATH240480'
 	
  var settings = {
    "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-attendees",
@@ -505,31 +504,14 @@ function openInv_ewx(event) {
 
 
 
-
-
-//$('.jr1').click(function(){
-	$('#ewx_invList').animate({left: "0%"}, 500);
-	$('#tkt_invList').animate({left: "100%"}, 500);
-   $('#ice_invList').animate({left: "100%"}, 500);
- 	$('#prk_invList').animate({left: "100%"}, 500);
-   $('#fry_invList').animate({left: "100%"}, 500);
-//});
-
 $('.jr1').click(function(){
 	
-	//var data = JSON.parse($('.data').html())
-	
-	//const filteredArray = data.filter(item => item.jeu === "x");
-
-	//const param = btoa(JSON.stringify(filteredArray))
-    ////$('#candle_code').attr('data','' );	
-    //$('#candle_code').attr('data','https://eweego-trax.netlify.app/vehicule_unass.html?param=' + param );
-    //$('#candle_code').load(location.href + " #candle_code");
+	var data = JSON.parse($('.data').html())
+	const filteredArray = data.filter(item => item.jeu === "x");
 
 	
 	var evtIco = $('#candle').html()
 
-	
 	$('.date').html('Jeu, 12 fév 2026');
 	$('.date').fadeIn();
 	$('.evt_ico').attr('src', evtIco);
@@ -538,6 +520,8 @@ $('.jr1').click(function(){
 	$('.evt').fadeIn();
 	$('.nbr').html('');
 	$('.nbr').fadeIn();
+	$('.nbr').html(filteredArray.length);
+	$('.nbrx').fadeIn();
 
 
 	$('.ttl').css('display','none');
