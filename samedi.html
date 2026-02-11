@@ -500,7 +500,9 @@ function openInv_ewx(event) {
       let li = target.closest('li'); // get reference
       let nodes = Array.from( li.closest('ul').children ); // get array
       let index = nodes.indexOf( li ); 
-	   alert(index)
+	  	
+	  var attendee = filteredArray[index].name
+	  alert(attendee)
 }
 
 
