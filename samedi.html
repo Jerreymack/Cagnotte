@@ -383,7 +383,7 @@ var compte = 'NATH240480'
 
 	          var ewx_data = response.documents
 
-	  	      const filteredArray = ewx_data.filter(item => item.sam === "x");
+	  	      filteredArray = ewx_data.filter(item => item.sam === "x");
 
 	          const filtered = filteredArray.filter(item => item.sam_at !== '');
 	          $('.presents').html(filtered.length);
