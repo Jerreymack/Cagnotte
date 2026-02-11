@@ -475,6 +475,22 @@ var compte = 'NATH240480'
 
 
 
+$('.inv_input').on("keyup", function(ev){  
+   var texto = $(this).val(); 
+   filtro(texto); 
+});  
+
+function filtro(texto) { 
+    var lista = $("#ewx_invList li").hide() 
+                     .filter(function(){ 
+                         var item = $(this).text(); 
+                         var padrao = new RegExp(texto, "i");                           
+                         return padrao.test(item); 
+                     }).closest("li").show(); 
+} 
+
+	
+
 function getEventTarget(e) {
    e = e || window.event;
    return e.target || e.srcElement; 
