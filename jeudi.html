@@ -386,7 +386,7 @@ var compte = 'NATH240480'
 
 	          var ewx_data = response.documents
 
-	  	      const filteredArray = ewx_data.filter(item => item.jeu === "x");
+	  	      filteredArray = ewx_data.filter(item => item.jeu === "x");
 	  	      const filtered = filteredArray.filter(item => item.jeu_at !== '');
 	          $('.presents').html(filtered.length);
 
@@ -499,8 +499,10 @@ function openInv_ewx(event) {
       let target = getEventTarget(event);
       let li = target.closest('li'); // get reference
       let nodes = Array.from( li.closest('ul').children ); // get array
-      let index = nodes.indexOf( li ); 
-	   alert(index)
+      let index = nodes.indexOf( li );
+	
+	  var attendee = filteredArray[index].name
+	   alert(attendee)
 }
 
 
