@@ -527,11 +527,7 @@ function openInv_ewx(event) {
 
 function update(){
 
-
 var compte = 'NATH240480'
-
-	alert(compte)
-	
 	
  var settings = {
    "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-attendees",
@@ -555,6 +551,7 @@ var compte = 'NATH240480'
 	          var ewx_listItemString = $('#ewx_listItem').html();
   
               filteredArray.forEach(ewx_buildNewList);
+	          $('#ewx_invList').html('');
   
              function ewx_buildNewList(item, index) {
  
