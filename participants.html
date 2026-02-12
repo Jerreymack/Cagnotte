@@ -794,6 +794,7 @@ $('.confirm').click(function() {
     $('#anim_mask').fadeIn()
 
 	var member = $('.mbrx').html()
+		 alert(member)
 	
     const now = new Date();
     const time = now.toLocaleTimeString('en-GB', { 
@@ -803,9 +804,13 @@ $('.confirm').click(function() {
       second: '2-digit'
     });
 
+			 alert(time)
+
 	 var body = {} 
           body.member = member
           body.time = time
+
+	 alert(JSON.stringify(body))
 
 	 //Add new wehicle_______________________________________________
 	 var settings = {
