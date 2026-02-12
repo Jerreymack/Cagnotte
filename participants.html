@@ -572,7 +572,8 @@ body, html {
 		 <div class="one_moment">Un instant s'il vous plaît...</div>
   </div>
 
-  <div class="dayx" style="position:absolute;font-size: 10px;"></div>
+  <div class="dayx" style="position:absolute;font-size: 0px;"></div>
+  <div class="mbrx" style="position:absolute;font-size: 0px;"></div>
   <img class="pres_img" src=''/>
   <div class="pres_msg"></div>
   
@@ -778,6 +779,7 @@ $('.overlay').click(function(){
 function openModal(e){
 
 	     $('.dayx').attr( e.day)
+		 $('.mbrx').attr( e.mbrx)
 	     $('.pres_img').attr( 'src', 'https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ e.member + '.png')
 	     $('.pres_msg').html( e.msg )
   
