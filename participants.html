@@ -450,6 +450,19 @@ body, html {
   z-index: 2;
 }
 
+.pres_img {
+  top: 20px;
+  height: 60px;
+  width: 60px;
+  left: 50%;
+  transform: translate(-50%,0%);
+  position: absolute;
+  border-radius: 50%;
+  filter: brightness(80%);
+  display: block;
+  z-index: 2;
+}
+
 .pres_msg {
   top: 50%;
   height: auto;
@@ -681,7 +694,7 @@ $('.overlay').click(function(){
 
 function openModal(e){
 	     $('.dayx').attr( e.day)
-	     $('.pres_img').attr( 'src', '')
+	     $('.pres_img').attr( 'src', 'https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ e.member + '.png')
 	     $('.pres_msg').html( e.msg )
   
          $('.modal').fadeIn()
