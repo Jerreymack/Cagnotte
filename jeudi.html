@@ -496,13 +496,20 @@ function getEventTarget(e) {
 
 
 function openInv_ewx(event) {
+
+	  var jour = "jeu"
+	  var txt = "Voulez-vous confirmer la présence de "
+	  var date = "<br><br>le jeudi 12 février 2026,<br><br>à la <strong>Veillée sans corps</strong>?"
       let target = getEventTarget(event);
       let li = target.closest('li'); // get reference
       let nodes = Array.from( li.closest('ul').children ); // get array
       let index = nodes.indexOf( li );
 	
 	  var attendee = filteredArray[index].name
-	   alert(attendee)
+	  var full_msg = txt + attendee + date
+	  var mbr = filteredArray[index].mbr
+	  alert(full_msg)
+	
 }
 
 
