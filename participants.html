@@ -825,6 +825,8 @@ $('.confirm').click(function() {
 		    myobjectId = 'grave_code'
 	  }
 
+	alert(url)
+		alert(myobjectId)
 	 //Add new wehicle_______________________________________________
 	 var settings = {
 		        "url": url,
@@ -839,6 +841,8 @@ $('.confirm').click(function() {
 	   $.ajax(settings).done(function(response) {
 
 		        if (response.statusCode == 200) {
+
+					alert(response.statusCode)
 
 					$('.modal').css('display','none')
                     $('.overlay').css('display','none')
