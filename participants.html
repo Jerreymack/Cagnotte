@@ -825,11 +825,10 @@ $('.confirm').click(function() {
 	   $.ajax(settings).done(function(response) {
 
 		        if (response.statusCode == 200) {
-                     //getDeposits()
+
 					$('.modal').css('display','none')
                     $('.overlay').css('display','none')
 					$('#anim_mask').css('display','none')
-					alert('Updated!')
 
 					callWhenLoaded('candle_code', (childWindow) => { childWindow.update() });
 		        }
