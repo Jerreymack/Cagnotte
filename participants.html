@@ -475,9 +475,10 @@ body, html {
 <div class="overlay"></div>
 	
 <div class="modal">
-  
+
+  <div class="dayx" style="position:absolute;font-size: 10px;"></div>
   <img class="pres_img" src=''/>
-  <div class="pres_msg">Voulez-vous confirmer la présence de Paul Ikondo?</div>
+  <div class="pres_msg"></div>
   
   <div class="confirm">Confirmer</div>
   
@@ -678,7 +679,10 @@ $('.overlay').click(function(){
 });
 
 
-function openModal(){
+function openModal(e){
+	     $('.dayx').attr( e.day)
+	     $('.pres_img').attr( 'src', '')
+	     $('.pres_msg').html( e.msg )
   
          $('.modal').fadeIn()
          $('.overlay').css('display','block')
