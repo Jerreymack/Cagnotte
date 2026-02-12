@@ -490,7 +490,7 @@ body, html {
 
 #anim_mask {
   position: relative;
-  display: block;
+  display: none;
   padding: 10px;
   width: calc(100% - 50px);
   height: calc(100% - 30px);
@@ -776,7 +776,7 @@ $('.overlay').click(function(){
 
 
 function openModal(e){
-	//alert(JE//e)
+
 	     $('.dayx').attr( e.day)
 	     $('.pres_img').attr( 'src', 'https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ e.member + '.png')
 	     $('.pres_msg').html( e.msg )
