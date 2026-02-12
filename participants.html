@@ -429,8 +429,6 @@ body, html {
     z-index: 21;
 }
 
-
-
 .confirm {
   bottom: 20px;
   width: 180px;
@@ -451,6 +449,23 @@ body, html {
   display: block;
   z-index: 2;
 }
+
+.pres_msg {
+  top: 50%;
+  height: auto;
+  width: 200px;
+  left: 50%;
+  line-height: 20px;
+  transform: translate(-50%,-50%);
+  color: #222;
+  font-size: 19px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
 </style>
    
         
@@ -462,7 +477,7 @@ body, html {
 <div class="modal">
   
   <img class="pres_img" src=''/>
-  <div class="pres_msg"></div>
+  <div class="pres_msg">Voulez-vous confirmer la présence de Paul Ikondo?</div>
   
   <div class="confirm">Confirmer</div>
   
