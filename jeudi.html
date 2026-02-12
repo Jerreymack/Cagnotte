@@ -527,6 +527,8 @@ function openInv_ewx(event) {
 
 function update(){
 
+$('#ewx_invList').html('');
+
 var compte = 'NATH240480'
 	
  var settings = {
@@ -551,7 +553,7 @@ var compte = 'NATH240480'
 	          var ewx_listItemString = $('#ewx_listItem').html();
   
               filteredArray.forEach(ewx_buildNewList);
-	          $('#ewx_invList').html('');
+	          
   
              function ewx_buildNewList(item, index) {
  
@@ -610,7 +612,7 @@ var compte = 'NATH240480'
 
                $('.ewx_benef_img', ewx_listItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ item.member + '.png').css('display','block');
 					 
-
+alert(item.name)
 
                    $('.ewx_name', ewx_listItem).html(item.name).css('display','block');
 					 
