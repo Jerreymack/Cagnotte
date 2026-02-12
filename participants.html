@@ -811,12 +811,14 @@ $('.confirm').click(function() {
 	 //alert(JSON.stringify(body))
 
 	  var day = $('.dayx').attr( e.day)
+	alert(day)
 
 	  if ( day === 'jeu' ) {
 		    url = 'https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-jeu'
-		    myobjectId = 'candle_cod'
+		    myobjectId = 'candle_code'
 	  }
-
+alert(url)
+	alert(myobjectId)
 	 //Add new wehicle_______________________________________________
 	 var settings = {
 		        "url": url,
