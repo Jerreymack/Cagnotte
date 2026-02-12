@@ -810,6 +810,8 @@ $('.confirm').click(function() {
           body.member = member
           body.time = time
 
+	alert(JSON.stringify(body))
+
 	  if ( day === 'jeu' ) {
 		    url = 'https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-jeu'
 		    myobjectId = 'candle_code'
@@ -839,6 +841,8 @@ $('.confirm').click(function() {
 	   };
 
 	   $.ajax(settings).done(function(response) {
+
+		          alert(JSON.stringify(response))
 
 		        if (response.statusCode == 200) {
 
