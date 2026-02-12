@@ -810,17 +810,21 @@ $('.confirm').click(function() {
           body.member = member
           body.time = time
 
-	 //alert(JSON.stringify(body))
-
-	 // var day = $('.dayx').attr( e.day)
-	alert(day)
-
 	  if ( day === 'jeu' ) {
 		    url = 'https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-jeu'
 		    myobjectId = 'candle_code'
 	  }
-alert(url)
-	alert(myobjectId)
+
+	if ( day === 'ven' ) {
+		    url = 'https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-ven'
+		    myobjectId = 'coffin_code'
+	  }
+
+	  if ( day === 'sam' ) {
+		    url = 'https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-sam'
+		    myobjectId = 'grave_code'
+	  }
+
 	 //Add new wehicle_______________________________________________
 	 var settings = {
 		        "url": url,
