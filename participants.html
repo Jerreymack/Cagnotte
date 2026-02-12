@@ -781,7 +781,6 @@ function openModal(e){
 	localStorage.setItem('member', e.mbrx);
 	localStorage.setItem('day', e.day);
 
-	     //$('.dayx').html( e.day)
 	     $('.pres_img').attr( 'src', 'https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ e.member + '.png')
 	     $('.pres_msg').html( e.msg )
   
@@ -797,6 +796,7 @@ $('.confirm').click(function() {
 
 	var member = localStorage.getItem('member');
 	var day = localStorage.getItem('day');
+	alert(day)
 	
     const now = new Date();
     const time = now.toLocaleTimeString('en-GB', { 
