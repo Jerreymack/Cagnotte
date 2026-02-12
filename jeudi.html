@@ -523,7 +523,114 @@ function openInv_ewx(event) {
 
 
 
+//*----------------UPDATE---------------------*/
 
+function update(){
+
+
+var compte = 'NATH240480'
+	
+	
+ var settings = {
+   "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-attendees",
+   "method": "POST",
+   "timeout": 8000,
+   "headers": {
+                  "Content-Type": "application/json"
+              },
+   "data": JSON.stringify({
+               "compte": compte,
+               }),
+  };
+  $.ajax(settings).done(function (response) {
+
+	          var ewx_data = response.documents
+
+	  	      filteredArray = ewx_data.filter(item => item.jeu === "x");
+	  	      const filtered = filteredArray.filter(item => item.jeu_at !== '');
+	          $('.presents').html(filtered.length);
+
+	          var ewx_listItemString = $('#ewx_listItem').html();
+  
+              filteredArray.forEach(ewx_buildNewList);
+  
+             function ewx_buildNewList(item, index) {
+ 
+               var ewx_listItem = $('<li class="ewx_li">' + ewx_listItemString + '</li>');
+         
+              
+               $('button', ewx_listItem).css('display', 'block');
+
+			   if( item.jeu_at !== ''){
+				   $('.check', ewx_listItem).css('display', 'block');  
+
+				   var cochex = `<svg width="42" height="42" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m48.87,24.46c0.88,-0.88 0.88,-2.35 0,-3.23c-0.88,-0.88 -2.35,-0.88 -3.23,0l3.23,3.23zm-24.59,21.36c0.88,0.88 2.35,0.88 3.23,0c0.88,-0.88 0.88,-2.35 0,-3.23l-3.23,3.23zm-5.92,-12.39c-0.88,-0.88 -2.35,-0.88 -3.23,0c-0.88,0.88 -0.88,2.35 0,3.23l3.23,-3.23zm-14.43,8.48c0.43,1.19 1.74,1.83 2.93,1.4c1.19,-0.43 1.83,-1.74 1.4,-2.93l-4.33,1.53zm12.24,9.67c-0.98,-0.79 -2.41,-0.64 -3.2,0.34c-0.79,0.98 -0.64,2.41 0.34,3.2l2.87,-3.54zm12.69,-13.58c-0.88,0.88 -0.88,2.35 0,3.23c0.88,0.88 2.35,0.88 3.23,0l-3.23,-3.23zm-13.73,-1.34l9.15,9.15l3.23,-3.23l-9.15,-9.15l-3.23,3.23zm42.05,-4.67c0,13.91 -11.26,25.17 -25.17,25.17l0,4.58c16.42,0 29.75,-13.33 29.75,-29.75l-4.58,0zm-50.35,0c0,-13.91 11.26,-25.17 25.17,-25.17l0,-4.58c-16.42,0 -29.75,13.33 -29.75,29.75l4.58,0zm25.17,-25.17c13.91,0 25.17,11.26 25.17,25.17l4.58,0c0,-16.42 -13.33,-29.75 -29.75,-29.75l0,4.58zm-23.74,33.56c-0.92,-2.62 -1.43,-5.43 -1.43,-8.39l-4.58,0c0,3.48 0.61,6.8 1.68,9.92l4.33,-1.53zm23.74,16.78c-6.01,0 -11.5,-2.11 -15.84,-5.58l-2.87,3.54c5.13,4.15 11.63,6.62 18.7,6.62l0,-4.58zm13.64,-35.94l-16.78,16.78l3.23,3.23l16.78,-16.78l-3.23,-3.23z" fill="#65cc3f" id="svg_1" transform="matrix(0.684389 0 0 0.68876 -1.02545 -1.04034)"/>
+  <rect fill="#000000" fill-opacity="0" height="41.75" id="svg_2" width="41.75" x="0.25" y="-0.13"/>
+ </g>
+</svg>`
+			   } else {
+
+				   var cochex = `<svg width="42" height="42" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m48.87,24.46c0.88,-0.88 0.88,-2.35 0,-3.23c-0.88,-0.88 -2.35,-0.88 -3.23,0l3.23,3.23zm-24.59,21.36c0.88,0.88 2.35,0.88 3.23,0c0.88,-0.88 0.88,-2.35 0,-3.23l-3.23,3.23zm-5.92,-12.39c-0.88,-0.88 -2.35,-0.88 -3.23,0c-0.88,0.88 -0.88,2.35 0,3.23l3.23,-3.23zm-14.43,8.48c0.43,1.19 1.74,1.83 2.93,1.4c1.19,-0.43 1.83,-1.74 1.4,-2.93l-4.33,1.53zm12.24,9.67c-0.98,-0.79 -2.41,-0.64 -3.2,0.34c-0.79,0.98 -0.64,2.41 0.34,3.2l2.87,-3.54zm12.69,-13.58c-0.88,0.88 -0.88,2.35 0,3.23c0.88,0.88 2.35,0.88 3.23,0l-3.23,-3.23zm-13.73,-1.34l9.15,9.15l3.23,-3.23l-9.15,-9.15l-3.23,3.23zm42.05,-4.67c0,13.91 -11.26,25.17 -25.17,25.17l0,4.58c16.42,0 29.75,-13.33 29.75,-29.75l-4.58,0zm-50.35,0c0,-13.91 11.26,-25.17 25.17,-25.17l0,-4.58c-16.42,0 -29.75,13.33 -29.75,29.75l4.58,0zm25.17,-25.17c13.91,0 25.17,11.26 25.17,25.17l4.58,0c0,-16.42 -13.33,-29.75 -29.75,-29.75l0,4.58zm-23.74,33.56c-0.92,-2.62 -1.43,-5.43 -1.43,-8.39l-4.58,0c0,3.48 0.61,6.8 1.68,9.92l4.33,-1.53zm23.74,16.78c-6.01,0 -11.5,-2.11 -15.84,-5.58l-2.87,3.54c5.13,4.15 11.63,6.62 18.7,6.62l0,-4.58zm13.64,-35.94l-16.78,16.78l3.23,3.23l16.78,-16.78l-3.23,-3.23z" fill="#cccccc" id="svg_1" transform="matrix(0.684389 0 0 0.68876 -1.02545 -1.04034)"/>
+  <rect fill="#000000" fill-opacity="0" height="41.75" id="svg_2" width="41.75" x="0.25" y="-0.13"/>
+ </g>
+</svg>`
+				   
+			   }	 
+
+					 
+               var  unix = Number(item.unix)
+					
+               const date = new Date(Number(unix));
+               const yyyy = date.getFullYear();
+
+               let mm = date.getMonth() + 1;
+               if ( String(mm).length == 1 ) { mm = '0' + mm }
+
+               let dd = date.getDate();
+               if ( String(dd).length == 1 ) { dd = '0' + dd }
+
+               let hh = date.getHours();
+               if ( String(hh).length == 1 ) { hh = '0' + hh }
+
+               let mn = date.getMinutes();
+               if ( String(mn).length == 1 ) { mn = '0' + mn }
+
+               let sc = date.getSeconds();
+               if ( String(sc).length == 1 ) { sc = '0' + sc }
+
+               dt = yyyy + '-' + mm + '-' + dd 
+               tm = hh + ':' + mn + ':' + sc
+					 
+			   $('.ewx_logo', ewx_listItem).attr('src', $('#candle').html());
+
+               $('.ewx_benef_img', ewx_listItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ item.member + '.png').css('display','block');
+					 
+
+
+                   $('.ewx_name', ewx_listItem).html(item.name).css('display','block');
+					 
+					 
+					    $('.ewx_id', ewx_listItem).html(item.jeu_at).css('display','block');
+
+	
+					 
+
+					    $('.ewx_inv_ico', ewx_listItem).html(cochex).css('display','block');
+              
+
+              $('#ewx_invList').append(ewx_listItem);
+         
+          }
+
+  });	
+	
+};
 
 
 </script>
