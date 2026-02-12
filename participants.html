@@ -779,8 +779,9 @@ $('.overlay').click(function(){
 function openModal(e){
 
 	localStorage.setItem('member', e.mbrx);
+	localStorage.setItem('day', e.day);
 
-	     $('.dayx').html( e.day)
+	     //$('.dayx').html( e.day)
 	     $('.pres_img').attr( 'src', 'https://eweego.nyc3.cdn.digitaloceanspaces.com/Attendees_Nath/'+ e.member + '.png')
 	     $('.pres_msg').html( e.msg )
   
@@ -795,6 +796,7 @@ $('.confirm').click(function() {
     $('#anim_mask').fadeIn()
 
 	var member = localStorage.getItem('member');
+	var day = localStorage.getItem('day');
 	
     const now = new Date();
     const time = now.toLocaleTimeString('en-GB', { 
@@ -810,7 +812,7 @@ $('.confirm').click(function() {
 
 	 //alert(JSON.stringify(body))
 
-	  var day = $('.dayx').attr( e.day)
+	 // var day = $('.dayx').attr( e.day)
 	alert(day)
 
 	  if ( day === 'jeu' ) {
