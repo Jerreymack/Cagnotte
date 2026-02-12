@@ -809,7 +809,7 @@ $('.confirm').click(function() {
           body.member = member
           body.time = time
 
-	 alert(JSON.stringify(body))
+	 //alert(JSON.stringify(body))
 
 	 //Add new wehicle_______________________________________________
 	 var settings = {
@@ -830,11 +830,30 @@ $('.confirm').click(function() {
                     $('.overlay').css('display','none')
 					$('#anim_mask').css('display','none')
 					alert('Updated!')
+
+					callWhenLoaded('candle_code', (childWindow) => { childWindow.update() });
 		        }
 
 	   });
 
 });
+
+
+
+function callWhenLoaded(objectId, callback) {
+    const obj = document.getElementById(objectId);
+    
+    if (obj.contentDocument && obj.contentDocument.readyState === 'complete') {
+        callback(obj.contentWindow);
+    } else {
+        obj.addEventListener('load', function() {
+            callback(obj.contentWindow);
+        }, { once: true });
+    }
+}
+
+
+callWhenLoaded('object1', (childWindow) => { childWindow.update() });
 
 
 </script>
