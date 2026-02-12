@@ -790,7 +790,46 @@ function openModal(e){
 
 
 $('.confirm').click(function() {
+	
     $('#anim_mask').fadeIn()
+
+	var member = $('.mbrx').html()
+	
+    const now = new Date();
+    const time = now.toLocaleTimeString('en-GB', { 
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+
+	 var body = {} 
+          body.member = member
+          body.time = time
+
+	 //Add new wehicle_______________________________________________
+	 var settings = {
+		        "url": "https://484z7720nk.execute-api.ca-central-1.amazonaws.com/V1/nath-confirm-jeu",
+		        "method": "POST",
+		        "timeout": 8000,
+		        "headers": {
+			        "Content-Type": "application/json"
+		        },
+		        "data": JSON.stringify(body),
+	   };
+
+	   $.ajax(settings).done(function(response) {
+
+		        if (response.statusCode == 200) {
+                     //getDeposits()
+					$('.modal').css('display','none')
+                    $('.overlay').css('display','none')
+					$('#anim_mask').css('display','none')
+					alert('Updated!')
+		        }
+
+	   });
+
 });
 
 
